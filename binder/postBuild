@@ -2,7 +2,7 @@
 echo "post"
 set -euo pipefail
 #
-upyter serverextension enable --py nbserverproxy --sys-prefix
+jupyter serverextension enable --py nbserverproxy --sys-prefix
 # labextensions
 jupyter labextension install dask-labextension \
                              @jupyter-widgets/jupyterlab-manager
