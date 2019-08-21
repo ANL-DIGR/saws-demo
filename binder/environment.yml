@@ -1,0 +1,23 @@
+name: saws
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.6
+  - numpy
+  - xarray
+  - matplotlib
+  - jupyter
+  - cython
+  - scipy
+  - netcdf4
+  - wradlib
+  - cartopy
+  - arm_pyart
+  - boto
+  - boto3
+  - docutils
+  - pip:
+    - kubernetes
+    - graphviz
+    - nexradaws
