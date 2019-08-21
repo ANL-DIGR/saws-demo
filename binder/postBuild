@@ -1,2 +1,7 @@
 #!/bin/bash
-echo "Nothing to see here"
+echo "post"
+set -euo pipefail
+
+# labextensions
+jupyter labextension install @pyviz/jupyterlab_pyviz \
+                             jupyter-leaflet
