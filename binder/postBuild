@@ -1,15 +1,16 @@
 #!/bin/bash
 echo "post"
-#set -euo pipefail
+set -euo pipefail
 #
+upyter serverextension enable --py nbserverproxy --sys-prefix
 # labextensions
-#jupyter labextension install @pyviz/jupyterlab_pyviz \
-#                             jupyter-leaflet
-#
+jupyter labextension install dask-labextension \
+                             @jupyter-widgets/jupyterlab-manager
+
 
 #jupyter serverextension enable --py nbserverproxy --sys-prefix
-jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38 \
-                             @jupyterlab/hub-extension@0.12 \
-                             @pyviz/jupyterlab_pyviz@0.6.4 \
-                             jupyter-leaflet@0.8.1 \
-                             dask-labextension@0.3.0
+#jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38 \
+#                             @jupyterlab/hub-extension@0.12 \
+#                             @pyviz/jupyterlab_pyviz@0.6.4 \
+#                             jupyter-leaflet@0.8.1 \
+#                             dask-labextension@0.3.0
