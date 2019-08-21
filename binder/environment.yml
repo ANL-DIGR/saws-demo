@@ -17,7 +17,11 @@ dependencies:
   - boto
   - boto3
   - docutils
+  - pydda
+  - cython
+  - pip
   - pip:
     - kubernetes
     - graphviz
     - nexradaws
+    - git+https://github.com/CSU-Radarmet/CSU_RadarTools.git
