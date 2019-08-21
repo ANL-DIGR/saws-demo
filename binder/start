@@ -10,13 +10,27 @@ jupyter lab workspaces import binder/jupyterlab-workspace.json \
   --NotebookApp.base_url=user/${JUPYTERHUB_USER}
 
 # download data
-#cd /home/jovyan
-#mkdir data
-#cd data
-#wget http://ldeo.columbia.edu/~rpa/sst.tar.gz
-#tar -xvzf sst.tar.gz
-#rm sst.tar.gz
-#cd -
+cd /home/jovyan
+mkdir data
+cd data
+mkdir cp2
+cd cp2
+wget http://mcs.anl.gov/~scollis/cp2.tgz
+tar -xvzf cp2.tgz
+rm cp2.tgz
+cd ..
+wget http://mcs.anl.gov/~scollis/20171230_MDV_data_SAWS.zip
+unzip 20171230_MDV_data_SAWS.zip
+rm 20171230_MDV_data_SAWS.zip
+cd 20171230_MDV_data_SAWS
+gunzip *.gz
+cd ..
+mkdir arm
+cd arm
+wget http://www.mcs.anl.gov/~scollis/pyart/csapr_test_case.nc
+wget http://www.mcs.anl.gov/~scollis/pyart/nsaxsaprppiC1.a1.20140201.184802.nc
+wget http://www.mcs.anl.gov/~scollis/pyart/sgpxsaprcmacsurI5.c1.20170801.044013.nc
+cd /home/jovyan
 
 
 exec "$@"
