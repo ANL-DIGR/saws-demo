@@ -19,6 +19,8 @@ dependencies:
   - pydda
   - cython
   - pip
+  - nodejs
+  - nbserverproxy
   - pip:
     - kubernetes
     - graphviz
