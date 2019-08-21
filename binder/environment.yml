@@ -3,11 +3,10 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.6
+  - python
   - numpy
   - xarray
   - matplotlib
-  - jupyter
   - cython
   - scipy
   - netcdf4
