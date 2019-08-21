@@ -18,11 +18,10 @@ wget http://mcs.anl.gov/~scollis/cp2.tgz
 tar -xvzf cp2.tgz
 rm cp2.tgz
 cd ..
-wget http://mcs.anl.gov/~scollis/20171230_MDV_data_SAWS.zip
-unzip 20171230_MDV_data_SAWS.zip
-rm 20171230_MDV_data_SAWS.zip
-cd 20171230_MDV_data_SAWS
-gunzip *.gz
+wget http://mcs.anl.gov/~scollis/20171230.zip
+unzip 20171230.zip
+rm 20171230.zip
+cd 20171230
 cd ..
 mkdir arm
 cd arm
