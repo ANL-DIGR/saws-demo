@@ -5,7 +5,9 @@ set -euo pipefail
 jupyter serverextension enable --py nbserverproxy --sys-prefix
 # labextensions
 jupyter labextension install dask-labextension \
-                             @jupyter-widgets/jupyterlab-manager
+                             @jupyter-widgets/jupyterlab-manager \
+                             @pyviz/jupyterlab_pyviz \
+                             jupyter-leaflet
 
 
 #jupyter serverextension enable --py nbserverproxy --sys-prefix

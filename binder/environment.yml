@@ -21,6 +21,7 @@ dependencies:
   - pip
   - nodejs
   - nbserverproxy
+  - ipyleaflet
   - pip:
     - kubernetes
     - graphviz
