@@ -27,4 +27,5 @@ dependencies:
     - kubernetes
     - graphviz
     - nexradaws
+    - cdsapi
     - git+https://github.com/CSU-Radarmet/CSU_RadarTools.git
