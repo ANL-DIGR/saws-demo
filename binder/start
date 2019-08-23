@@ -8,32 +8,6 @@ sed -i -e "s|WORKSPACE_ID|/user/${JUPYTERHUB_USER}/lab|g" binder/jupyterlab-work
 # Import the workspace into JupyterLab
 jupyter lab workspaces import binder/jupyterlab-workspace.json --NotebookApp.base_url=user/${JUPYTERHUB_USER}
 
-# download data
-cd /home/jovyan
-mkdir data
-cd data
-mkdir cp2
-cd cp2
-wget http://mcs.anl.gov/~scollis/cp2.tgz
-tar -xvzf cp2.tgz
-rm cp2.tgz
-cd ..
-wget http://mcs.anl.gov/~scollis/20171230.zip
-unzip 20171230.zip
-rm 20171230.zip
-cd 20171230
-cd ..
-mkdir arm
-cd arm
-wget http://www.mcs.anl.gov/~scollis/pyart/csapr_test_case.nc
-wget http://www.mcs.anl.gov/~scollis/pyart/nsaxsaprppiC1.a1.20140201.184802.nc
-wget http://www.mcs.anl.gov/~scollis/pyart/sgpxsaprcmacsurI5.c1.20170801.044013.nc
-cd ..
-wget http://www.mcs.anl.gov/~scollis/one_we_prepared_earlier.nc
-wget http://www.mcs.anl.gov/~scollis/era5_data.nc
-cd /home/jovyan
-
-
 exec "$@"
 
 #@jupyter-widgets/jupyterlab-manager needs to be included in build
